@@ -1,0 +1,500 @@
+/* ====== Bāzes stils ====== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --page-bg: #e5e7eb;
+    --card-bg: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --accent: #7c3aed;
+    --accent-dark: #5b21b6;
+    --border-input: #d1d5db;
+    --radius-card: 22px;
+    --shadow-card: 0 25px 50px rgba(15, 23, 42, 0.15);
+    --font-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--text-main);
+}
+
+/* Pelēks fons ap wrapperi */
+
+.page-bg {
+    min-height: 100vh;
+    background: var(--page-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+/* wrappers ar divām pusēm */
+
+.login-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    max-width: 1120px;
+    width: 100%;
+    min-height: 520px;
+
+    display: flex;
+    overflow: hidden;
+}
+
+/* Responsivitāte */
+
+@media (max-width: 900px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .login-right {
+        order: 1;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .login-left {
+        order: 2;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    
+    .brand {
+        padding-top: 24px !important;
+    }
+
+    p.signup-text {
+        padding-bottom: 24px;
+    }
+
+    .btn-primary {
+        width: 100% !important;
+    }
+}
+
+/* Kreisais panelis */
+
+.login-left,
+.login-right {
+    flex: 1;
+    padding: 48px 56px;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo augšā */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.brand-dot {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/chem-flask-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+}
+
+.brand-name {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+/* Virsraksts + apakšteksts */
+
+.login-copy h1 {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.login-copy p {
+    margin: 0 0 28px;
+    color: var(--text-muted);
+}
+
+/* Forma */
+
+.login-form {
+    max-width: 360px;
+}
+
+.field {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.field-label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+
+.field input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-input);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.18);
+}
+
+/* Remember + Forgot Password vienā rindā */
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0 20px;
+    font-size: 0.85rem;
+}
+
+.remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+}
+
+.remember input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+}
+
+.link-muted {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.link-muted:hover {
+    color: var(--accent);
+}
+
+/* Pogas */
+
+.btn-primary {
+    width: 160px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 12px 20px rgba(124, 58, 237, 0.35);
+    transition: background 0.15s ease, transform 0.1s ease,
+        box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 16px 26px rgba(88, 28, 135, 0.4);
+}
+
+
+.btn-secondary {
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    background: #ffffff;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(124, 58, 237, 0.08);
+}
+
+.login-card {
+    position: relative;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-main);
+    padding: 6px 2px;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-back .icon {
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+
+.btn-back:hover {
+    color: var(--accent);
+}
+
+.btn-back:hover .icon {
+    transform: translateX(-3px);
+}
+
+.btn-danger-report {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+
+    background: rgba(220, 38, 38, 0.08);
+    color: #b91c1c;
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-danger-report:hover {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.6);
+    transform: translateY(-1px);
+}
+
+a.btn-primary, a.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+
+/* Teksts apakšā */
+
+.signup-text {
+    margin-top: 26px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.link-accent {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-accent:hover {
+    text-decoration: underline;
+}
+
+/* Login copy labajā panelī */
+.login-right {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 28px;
+    padding: 48px 32px;
+}
+
+.login-right .right-copy h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin: 0 0 8px;
+}
+
+.login-right .right-copy p {
+    color: #f5dfff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Ilustrācija */
+.illustration {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 4;
+    border-radius: 22px;
+    background-image: url("../img/lab-illustration-accent.svg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.4);
+}
+
+/* ============================
+   DATA.LAPAS IZKĀRTOJUMS
+   ============================ */
+
+   .data-page .page-bg {
+    align-items: flex-start;
+    padding-top: 32px;
+}
+
+.data-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 40px;
+}
+
+/* Header augšā */
+
+.data-header {
+    margin-bottom: 20px;
+}
+
+.data-header .btn-back {
+    position: static;
+    margin-bottom: 12px;
+    display: inline-flex;
+}
+
+.data-title {
+    font-size: 2.4rem;
+    margin: 0 0 6px;
+    color: var(--accent-dark);
+}
+
+.data-subtitle {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+}
+
+/* Card ar search + tabula */
+
+.data-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 24px 28px 24px;
+}
+
+/* Search + pogas inline */
+
+.data-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.data-search-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border-input);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.data-search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.18);
+}
+
+.data-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.data-filter-btn {
+    width: auto;
+    padding-inline: 18px;
+}
+
+/* Tabula */
+
+.data-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.data-table thead th {
+    background: var(--accent-dark);
+    color: #ffffff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--text-main);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Ziņot par kļūdu poga šajā card */
+
+.data-card .btn-danger-report {
+    position: static;
+    margin-top: 16px;
+    margin-left: auto;
+    display: inline-flex;
+}

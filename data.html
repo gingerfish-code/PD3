@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tava labratorijas uzskaites sitēma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="data-page">
+    <div class="page-bg">
+        <div class="data-container">
+
+            <!-- Augšējais virsraksts + back -->
+            <header class="data-header">
+                <a href="index.html" class="btn-back">
+                    <span class="icon">←</span>
+                    <span>Atpakaļ uz sākumlapu</span>
+                </a>
+
+                <h1 class="data-title">Publiskā datubāze</h1>
+                <p class="data-subtitle">
+                    Šajā datubāzē Tu vari apskatīt pieejamās vielas un aprīkojumu.
+                </p>
+            </header>
+
+            <!-- Card ar search, pogām un tabulu -->
+            <section class="data-card">
+                <!-- Search + pogas vienā rindā -->
+                <form class="data-filters">
+                    <input
+                        type="search"
+                        class="data-search-input"
+                        placeholder="Meklēt"
+                    >
+
+                    <div class="data-filter-buttons">
+                        <button type="button" class="btn-primary data-filter-btn">
+                            Rādīt visu
+                        </button>
+                        <button type="button" class="btn-secondary data-filter-btn">
+                            Rādīt vielas
+                        </button>
+                        <button type="button" class="btn-secondary data-filter-btn">
+                            Rādīt aprīkojumu
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Tabula -->
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nosaukums</th>
+                            <th>Tips</th>
+                            <th>Apakštips</th>
+                            <th>Skaits</th>
+                            <th>Svars</th>
+                            <th>Komentāri</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>KLI042724</td>
+                            <td><strong>Katalizators</strong></td>
+                            <td>Aprīkojums</td>
+                            <td>Trauks</td>
+                            <td>23</td>
+                            <td>-</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        <tr>
+                            <td>KLI042723</td>
+                            <td><strong>Birete</strong></td>
+                            <td>Aprīkojums</td>
+                            <td>Trauks</td>
+                            <td>20</td>
+                            <td>-</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        <tr>
+                            <td>KLI042742</td>
+                            <td><strong>HCl</strong></td>
+                            <td>Viela</td>
+                            <td>Skābe</td>
+                            <td>19</td>
+                            <td>40</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        <tr>
+                            <td>KLI042724</td>
+                            <td><strong>Kolba</strong></td>
+                            <td>Aprīkojums</td>
+                            <td>Trauks</td>
+                            <td>20</td>
+                            <td>-</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        <tr>
+                            <td>KLI042534</td>
+                            <td><strong>Fe</strong></td>
+                            <td>Viela</td>
+                            <td>Metāls</td>
+                            <td>48</td>
+                            <td>10</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        <tr>
+                            <td>KLI442721</td>
+                            <td><strong>Na</strong></td>
+                            <td>Viela</td>
+                            <td>Metāls</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>Daži komentāri</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Ziņošanas poga apakšējā labajā stūrī -->
+                <button class="btn-danger-report data-report-btn">
+                    Ziņot par kļūdu
+                </button>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
