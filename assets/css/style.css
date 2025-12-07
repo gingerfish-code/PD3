@@ -109,10 +109,13 @@ body {
 }
 
 .brand-dot {
-    width: 14px;
+    width: 28px;
     height: 28px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #8b5cf6, #ec4899);
+    background-image: url("../img/chem-flask-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
 }
 
 .brand-name {

@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accentFlask" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="128" cy="128" r="120" fill="white" />
+
+  <g transform="translate(60,20)">
+    <rect x="48" y="0" width="40" height="70" rx="8" fill="#7c3aed"/>
+    <rect x="38" y="0" width="60" height="18" rx="4" fill="#5b21b6"/>
+    <path d="M20 70 L116 70 L136 160 Q128 210 68 210 Q8 210 0 160 Z"
+          fill="url(#accentFlask)" />
+    <ellipse cx="70" cy="150" rx="28" ry="12" fill="rgba(255,255,255,0.25)" />
+    <circle cx="65" cy="110" r="6" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="80" cy="125" r="4" fill="rgba(255,255,255,0.4)"/>
+  </g>
+</svg>
