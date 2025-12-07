@@ -239,7 +239,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: rgba(124, 58, 237, 0.08); /* ļoti viegls violets tonis */
+    background: rgba(124, 58, 237, 0.08);
 }
 
 .login-card {
@@ -277,7 +277,7 @@ body {
 }
 
 .btn-back:hover .icon {
-    transform: translateX(-3px); /* neliels “slide” efekts */
+    transform: translateX(-3px);
 }
 
 .btn-danger-report {
