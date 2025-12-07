@@ -349,7 +349,7 @@ body {
     max-width: 420px;
     aspect-ratio: 4 / 4;
     border-radius: 22px;
-    background-image: url("../img/login-illustration.svg");
+    background-image: url("../img/lab-illustration-accent.svg");
     background-size: cover;
     background-position: center;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.4);
