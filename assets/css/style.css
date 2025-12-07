@@ -354,3 +354,129 @@ body {
     background-position: center;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.4);
 }
+
+/* ============================
+   DATA.LAPAS IZKĀRTOJUMS
+   ============================ */
+
+   .data-page .page-bg {
+    align-items: flex-start;
+    padding-top: 32px;
+}
+
+.data-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 40px;
+}
+
+/* Header augšā */
+
+.data-header {
+    margin-bottom: 20px;
+}
+
+.data-header .btn-back {
+    position: static;
+    margin-bottom: 12px;
+    display: inline-flex;
+}
+
+.data-title {
+    font-size: 2.4rem;
+    margin: 0 0 6px;
+    color: var(--accent-dark);
+}
+
+.data-subtitle {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+}
+
+/* Card ar search + tabula */
+
+.data-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 24px 28px 24px;
+}
+
+/* Search + pogas inline */
+
+.data-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.data-search-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border-input);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.data-search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.18);
+}
+
+.data-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.data-filter-btn {
+    width: auto;
+    padding-inline: 18px;
+}
+
+/* Tabula */
+
+.data-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 8px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.data-table thead th {
+    background: var(--accent-dark);
+    color: #ffffff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--text-main);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Ziņot par kļūdu poga šajā card */
+
+.data-card .btn-danger-report {
+    position: static;
+    margin-top: 16px;
+    margin-left: auto;
+    display: inline-flex;
+}
